@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Site</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+<header>
+  <nav>
+    <ul id="nav-menu">
+      <li><a href="http://localhost:8080/customers/all">Customers</a></li>
+      <li><a href="http://localhost:8080/about">About</a></li>
+      <li><a href="http://localhost:8080/customers/register">Register</a></li>
+      <li><a href="http://localhost:8080/login">Login</a></li>
+      <li><a href="http://localhost:8080/admin">Admin</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="admin">
+    <h2>Admin Site</h2>
+    <h3>Manage Customers</h3>
+    <form action="updatecustomer"></form>
+
+    <h3>Update About Us</h3>
+    <form action="updateaboutpage"></form>
+
+    <h3>Create Blog Post</h3>
+    <form action="createblogpost"></form>
+  </section>
+</main>
+<script src="../js/script.js"></script>
+</body>
+</html>
