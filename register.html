@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Site</title>
-  <link rel="stylesheet" href="../static/styles.css">
+  <title>Registration</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header>
@@ -19,18 +19,19 @@
   </nav>
 </header>
 <main>
-  <section id="admin">
-    <h2>Admin Site</h2>
-    <h3>Manage Customers</h3>
-    <form action="updatecustomer"></form>
+  <section id="register">
+    <h2>Register</h2>
+    <form id="register-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
 
-    <h3>Update About Us</h3>
-    <form action="updateaboutpage"></form>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
 
-    <h3>Create Blog Post</h3>
-    <form action="createblogpost"></form>
+      <input type="submit" value="Register">
+    </form>
   </section>
 </main>
-<script src="../js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
