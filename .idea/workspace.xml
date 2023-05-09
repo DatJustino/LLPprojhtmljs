@@ -5,30 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin-courses.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-portraits.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-portraits.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/adminCourses.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/adminPortraits.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/customerPortraits.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/fetchany.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/blog/fetchblogposts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/database/DDL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/DDL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/admin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/basket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/courses.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/illustrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/illustrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/portraits.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLPprojhtmljs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LLPprojhtmljs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,20 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/veronica/IdeaProjects/javascript/LLPprojhtmljs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/veronica/IdeaProjects/javascript/LLPprojhtmljs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/css" />
@@ -89,6 +71,9 @@
       <workItem from="1683022318647" duration="2762000" />
       <workItem from="1683286649373" duration="3182000" />
       <workItem from="1683292699731" duration="9169000" />
+      <workItem from="1683469602718" duration="8239000" />
+      <workItem from="1683556916999" duration="8133000" />
+      <workItem from="1683615135961" duration="14571000" />
     </task>
     <servers />
   </component>

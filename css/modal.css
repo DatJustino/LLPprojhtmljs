@@ -1,0 +1,164 @@
+    /* Main Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Blog Post Table */
+.styled-table {
+    border-collapse: collapse;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table td, .styled-table th {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.styled-table thead th {
+    background-color: #3891A6;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 2px solid #ddd;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Create Blog Post Button */
+#createBlogPostButton {
+    background-color: #2B9EB3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#createBlogPostButton:hover {
+    background-color: #007c91;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #888;
+}
+
+/* Create Blog Post Modal */
+#createBlogPostModal label,
+#createBlogPostModal input,
+#createBlogPostModal textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#createBlogPostModal label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+}
+
+#createBlogPostModal input,
+#createBlogPostModal textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#createBlogPostModal button[type="submit"] {
+    background-color: #2B9EB3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#createBlogPostModal button[type="submit"]:hover {
+    background-color: #007c91;
+}
+
+/* Edit Blog Post Modal */
+#editBlogPostModal label,
+#editBlogPostModal input,
+#editBlogPostModal textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+#editBlogPostModal label {
+    font-weight: bold;
+}
+
+#editBlogPostModal input,
+#editBlogPostModal textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#editBlogPostModal button[type="submit"],
+#editBlogPostModal button[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#editBlogPostModal button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#editBlogPostModal button[type="button"]:hover {
+    background-color: #f44336;
+}
