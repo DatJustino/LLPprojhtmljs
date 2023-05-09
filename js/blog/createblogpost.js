@@ -123,7 +123,7 @@ blogPostsTable.addEventListener('click', async (event) => {
             console.log('blogPostId:', blogPostId); // debugging
             const blogPosts = await fetchblogposts();
             console.log('blogPosts:', blogPosts); // debugging
-            const blogPost = blogPosts.find(blogPost => blogPost.id == blogPostId);
+            const blogPost = blogPosts.find(blogPost => blogPost.id === blogPostId);
             showEditBlogPostModal(blogPost);
             updateBlogPostsTable();
         }

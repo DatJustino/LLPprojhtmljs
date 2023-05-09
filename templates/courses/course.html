@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+</head>
+<body>
+<h1>Courses</h1>
+<button id="createCourseButton">Create Course</button>
+<!-- Courses Table -->
+<table id="coursesTable" class="styled-table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Image URL</th>
+    <th>Image</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{courseId}}</td>
+    <td>{{name}}</td>
+    <td>{{description}}</td>
+    <td>{{imageUrl}}</td>
+    <td>{{img}}</td>
+    <td>
+      <button class="editCourseButton btn btn-edit" data-courseid="{{courseId}}">Edit</button>
+      <button class="deleteCourseButton btn btn-delete" data-courseid="{{courseId}}">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<!-- Create Course Form -->
+<form id="createCourseModal" style="display: none;">
+  <div class="modal-content">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+    <label for="courseContent">Description:</label>
+    <textarea id="courseContent" name="courseContent" rows="10" required></textarea>
+    <label for="imageUrl">Image URL:</label>
+    <input type="text" id="imageUrl" name="imageUrl">
+    <button type="submit">Create</button>
+  </div>
+</form>
+
+<div id="editCourseModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form id="editForm">
+      <input type="hidden" id="courseId" name="courseId">
+      <label for="courseName">Title:</label>
+      <input type="text" name="courseName" id="courseName" required>
+      <label for="courseContent">Description:</label>
+      <textarea name="courseContent" rows="10" id="courseContent" required></textarea>
+      <label for="courseImageUrl">Image URL:</label>
+      <input type="text" id="courseImageUrl" name="courseImageUrl">
+      <button type="submit" id="updateCourseButton">Save Changes</button>
+      <button type="button" onclick="hideEditCourseModal()">Cancel</button>
+    </form>
+  </div>
+</div>
+<!-- Delete Confirmation Modal -->
+<div id="deleteConfirmationModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="deleteConfirmationMessage"></div>
+    <p>Are you sure you want to delete the selected course?</p>
+    <button id="confirmDeleteButton">Yes</button>
+    <button id="cancelDeleteButton">No</button>
+  </div>
+</div>
+<script src="../../js/courses/courses.js"></script>
+</body>
+</html>
