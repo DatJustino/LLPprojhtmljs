@@ -34,56 +34,106 @@
     </thead>
     <tbody>
     <tr>
-        <td>{{courseId}}</td>
-        <td>{{courseName}}</td>
-        <td>{{courseDescription}}</td>
-        <td>{{imageUrl}}</td>
-        <td>{{img}}</td>
+        <td>{{id}}</td>
+        <td>{{fName}}</td>
+        <td>{{comLName}}</td>
+        <td>{{comEmail}}</td>
+        <td>{{comPhoneNumber}}</td>
+        <td>{{comSubject}}</td>
+        <td>{{comDescription}}</td>
+        <td>{{comPageFormat1}}</td>
+        <td>{{comPageFormat2}}</td>
+        <td>{{comDeliveryDate}}</td>
+        <td>{{comStreet}}</td>
+        <td>{{comHouseNumber}}</td>
+        <td>{{comFloor}}</td>
+        <td>{{comZipCode}}</td>
         <td>
-            <button class="editCommissionsButton btn btn-edit" data-commissionsId="{{commissionsId}}">Edit</button>
-            <button class="deleteCommissionsButton btn btn-delete" data-commissionsId="{{commissionsId}}">Delete
-            </button>
+            <button class="editCommissionButton btn btn-com" data-id="{{id}}">Edit</button>
+            <button class="deleteCommissionButton btn btn-delete" data-id="{{id}}">Delete</button>
         </td>
     </tr>
     </tbody>
 </table>
-
+<<!--table id="commissionsTable" class="styled-table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Subject</th>
+        <th>Description</th>
+        <th>Page Format 1</th>
+        <th>Page Format 2</th>
+        <th>Delivery Date</th>
+        <th>Street</th>
+        <th>House Number</th>
+        <th>Floor</th>
+        <th>Zip Code</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{commissionsid}}</td>
+        <td>{{comfname}}</td>
+        <td>{{comlname}}</td>
+        <td>{{comemail}}</td>
+        <td>{{comphonenumber}}</td>
+        <td>{{comsubject}}</td>
+        <td>{{comdescription}}</td>
+        <td>{{compageformat1}}</td>
+        <td>{{compageformat2}}</td>
+        <td>{{comdeliverydate}}</td>
+        <td>{{comstreet}}</td>
+        <td>{{comhousenumber}}</td>
+        <td>{{comfloor}}</td>
+        <td>{{comzipcode}}</td>
+        <td>
+            <button class="editCommissionButton btn btn-com" data-id="{{id}}">Edit</button>
+            <button class="deleteCommissionButton btn btn-delete" data-id="{{id}}">Delete</button>
+        </td>
+    </tr>
+    </tbody>
+</table>-->
 <!-- Create Commission Form -->
 <dialog id="create-commission-dialog">
     <h2>Create Commission</h2>
     <form id="create-commission-form" method="dialog">
         <label for="comFName">First Name:</label>
-        <input type="text" id="comFName" name="comfname" required><br>
+        <input type="text" id="comFName" name="comFName" required><br>
         <label for="comLName">Last Name:</label>
-        <input type="text" id="comLName" name="comlname" required><br>
+        <input type="text" id="comLName" name="comLName" required><br>
         <label for="comPhoneNumber">Phone Number:</label>
-        <input type="text" id="comPhoneNumber" name="comphonenumber"><br>
-        <label for="cEmail">Email:</label>
-        <input type="email" id="cEmail" name="comemail" required><br>
+        <input type="text" id="comPhoneNumber" name="comPhoneNumber"><br>
+        <label for="comEmail">Email:</label>
+        <input type="email" id="comEmail" name="comEmail" required><br>
         <label for="comSubject">Subject:</label>
-        <input type="text" id="comSubject" name="comsubject" required><br>
+        <input type="text" id="comSubject" name="comSubject" required><br>
         <label for="comDescription">Description:</label>
-        <textarea id="comDescription" name="comdescription" rows="10" required></textarea><br>
+        <textarea id="comDescription" name="comDescription" rows="10" required></textarea><br>
         <label for="comPageFormat1">Page Format 1:</label>
-        <input type="text" id="comPageFormat1" name="compageformat1"><br>
+        <input type="text" id="comPageFormat1" name="comPageFormat1"><br>
         <label for="comPageFormat2">Page Format 2:</label>
-        <input type="text" id="comPageFormat2" name="compageformat2" required><br>
+        <input type="text" id="comPageFormat2" name="comPageFormat2" required><br>
         <label for="comDeliveryDate">Delivery Date:</label>
-        <input type="date" id="comDeliveryDate" name="comdeliverydate"        required><br>
+        <input type="date" id="comDeliveryDate" name="comDeliveryDate" required><br>
         <label for="comStreet">Street:</label>
-        <input type="text" id="comStreet" name="comstreet"><br>
+        <input type="text" id="comStreet" name="comStreet"><br>
         <label for="comHouseNumber">House Number:</label>
-        <input type="number" id="comHouseNumber" name="comhousenumber"><br>
+        <input type="number" id="comHouseNumber" name="comHouseNumber"><br>
         <label for="comFloor">Floor:</label>
-        <input type="text" id="comFloor" name="comfloor"><br>
+        <input type="text" id="comFloor" name="comFloor"><br>
         <label for="comZipCode">Zip Code:</label>
-        <input type="number" id="comZipCode" name="comzipcode"><br>
+        <input type="number" id="comZipCode" name="comZipCode"><br>
         <label for="comImage1">Image 1:</label>
-        <input type="file" id="comImage1" name="comimage1" accept="image/*" required><br>
+        <input type="file" id="comImage1" name="comImage1" accept="image/*" required><br>
         <label for="comImage2">Image 2:</label>
-        <input type="file" id="comImage2" name="comimage2" accept="image/*"><br>
+        <input type="file" id="comImage2" name="comImage2" accept="image/*"><br>
         <label for="comImage3">Image 3:</label>
-        <input type="file" id="comImage3" name="comimage3" accept="image/*"><br>
+        <input type="file" id="comImage3" name="comImage3" accept="image/*"><br>
         <button type="submit">Create</button>
     </form>
 </dialog>
@@ -93,38 +143,39 @@
     <h2>Edit Commission</h2>
     <span class="close">&times;</span>
     <form id="update-commission-form" method="dialog">
-        <input type="hidden" id="editCommissionId" name="editcommissionid">
+        <input type="hidden" id="commissionId" name="commissionId">
         <label for="comFName">First Name:</label>
-        <input type="text" id="comFName" name="comfname" required><br>
+        <input type="text" id="comFName" name="comFName" required><br>
         <label for="comLName">Last Name:</label>
-        <input type="text" id="comLName" name="comlname" required><br>
+        <input type="text" id="comLName" name="comLName" required><br>
         <label for="comEmail">Email:</label>
-        <input type="email" id="comEmail" name="comemail" required><br>
+        <input type="email" id="comEmail" name="comEmail" required><br>
         <label for="comPhoneNumber">Phone Number:</label>
-        <input type="text" id="comPhoneNumber" name="comphonenumber"><br>
+        <input type="text" id="comPhoneNumber" name="comPhoneNumber"><br>
         <label for="comSubject">Subject:</label>
-        <input type="text" id="comSubject" name="comsubject" required><br>
+        <input type="text" id="comSubject" name="comSubject" required><br>
         <label for="comDescription">Description:</label>
-        <textarea id="comDescription" name="comdescription" rows="10" required></textarea><br>
+        <textarea id="comDescription" name="comDescription" rows="10" required></textarea><br>
         <label for="comPageFormat1">Page Format 1:</label>
-        <input type="text" id="comPageFormat1" name="compageformat1"><br>
+        <input type="text" id="comPageFormat1" name="comPageFormat1"><br>
         <label for="comPageFormat2">Page Format 2:</label>
-        <input type="text" id="comPageFormat2" name="compageformat2" required><br>
+        <input type="text" id="comPageFormat2" name="comPageFormat2" required><br>
         <label for="comDeliveryDate">Delivery Date:</label>
-        <input type="date" id="comDeliveryDate" name="comdeliverydate" required><br>
+        <input type="date" id="comDeliveryDate" name="comDeliveryDate" required><br>
         <label for="comStreet">Street:</label>
-        <input type="text" id="comStreet" name="comstreet"><br>
+        <input type="text" id="comStreet" name="comStreet"><br>
         <label for="comHouseNumber">House Number:</label>
-        <input type="number" id="comHouseNumber" name="comhousenumber"><br>
-        <label for="comFloor">Floor:</label>        <input type="text" id="comFloor" name="comfloor"><br>
+        <input type="number" id="comHouseNumber" name="comHouseNumber"><br>
+        <label for="comFloor">Floor:</label>
+        <input type="text" id="comFloor" name="comFloor"><br>
         <label for="comZipCode">Zip Code:</label>
-        <input type="number" id="comZipCode" name="comzipcode"><br>
+        <input type="number" id="comZipCode" name="comZipCode"><br>
         <label for="comImage1">Image 1:</label>
-        <input type="file" id="comImage1" name="comimage1" accept="image/*" required><br>
+        <input type="file" id="comImage1" name="comImage1" accept="image/*" required><br>
         <label for="comImage2">Image 2:</label>
-        <input type="file" id="comImage2" name="comimage2" accept="image/*"><br>
+        <input type="file" id="comImage2" name="comImage2" accept="image/*"><br>
         <label for="comImage3">Image 3:</label>
-        <input type="file" id="comImage3" name="comimage3" accept="image/*"><br>
+        <input type="file" id="comImage3" name="comImage3" accept="image/*"><br>
         <button type="submit">Save Changes</button>
         <button type="button" onclick="hideEditCommissionModal()">Cancel</button>
     </form>
@@ -142,8 +193,8 @@
     </form>
 </dialog>
 
-
-<script src="../../js/commissions/commissions.js"></script>
+<script src="../../js/script.js"></script>
+<!--<script src="../../js/commissions/commissions.js"></script>-->
 </body>
 </html>
 
