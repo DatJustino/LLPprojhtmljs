@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="CRUD for blogpost admin page is working.">
-      <change afterPath="$PROJECT_DIR$/js/courses/courses.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/courses/course.html" afterDir="false" />
+    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="Create read and delete now works for courses, input is not being input correctly. Blogadmin is done.">
+      <change afterPath="$PROJECT_DIR$/js/commissions/commissions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commissions/commissions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/blog/createblogpost.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/blog/createblogpost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blog/deleteblogpost.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blog/fetchblogposts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blog/updateblogpost.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/courses/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/courses/courses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courses/course.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -41,6 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "/home/veronica/IdeaProjects/javascript/LLPprojhtmljs",
     "node.js.detected.package.eslint": "true",
@@ -58,6 +66,9 @@
       <recent name="$PROJECT_DIR$/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\commissions" />
+      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\commissions.html" />
+      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\blog" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -75,7 +86,11 @@
       <workItem from="1683292699731" duration="9169000" />
       <workItem from="1683469602718" duration="8239000" />
       <workItem from="1683556916999" duration="8133000" />
-      <workItem from="1683615135961" duration="25115000" />
+      <workItem from="1683615135961" duration="25194000" />
+      <workItem from="1683716469927" duration="6914000" />
+      <workItem from="1683801155042" duration="8811000" />
+      <workItem from="1683886258908" duration="220000" />
+      <workItem from="1683886513617" duration="21329000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD for blogpost admin page is working.">
       <created>1683636607853</created>
@@ -84,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683636607853</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create read and delete now works for courses, input is not being input correctly. Blogadmin is done.">
+      <created>1683648377060</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683648377060</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CRUD for blogpost admin page is working." />
-    <option name="LAST_COMMIT_MESSAGE" value="CRUD for blogpost admin page is working." />
+    <MESSAGE value="Create read and delete now works for courses, input is not being input correctly. Blogadmin is done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create read and delete now works for courses, input is not being input correctly. Blogadmin is done." />
   </component>
 </project>

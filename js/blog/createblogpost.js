@@ -1,15 +1,51 @@
+"use strict";
+
 console.log('createblogpost.js loaded');
 
+const blogPostsTable = document.querySelector('#blogPostsTable');
+const editBlogPostModal = document.querySelector('#editBlogPostModal');
 const createBlogPostButton = document.querySelector('#createBlogPostButton');
 const createBlogPostModal = document.querySelector('#createBlogPostModal');
 
-window.onload = async function () {
-    await updateBlogPostsTable();
-};
+createBlogPostButton.addEventListener('click', showCreateBlogPostModal);
 
-function showCreateBlogPostModal() {
-    createBlogPostModal.style.display = 'block';
+document.querySelector('#createBlogPostModal').addEventListener('submit', createBlogPost);
+document.querySelector('#editBlogPostModal form').addEventListener('submit', updateBlogPost);
+
+const deleteConfirmationMessage = document.querySelector('#deleteConfirmationMessage');
+const confirmDeleteButton = document.querySelector('#confirmDeleteButton');
+const cancelDeleteButton = document.querySelector('#cancelDeleteButton');
+
+blogPostsTable.addEventListener('click', async (event) => {
+    blogPostsTable.addEventListener('click', async (event) => {
+        if (event.target.classList.contains('editBlogPostButton')) {
+            const blogPostId = event.target.dataset.blogpostid;
+            console.log('blogPostId:', blogPostId); // debugging
+            const blogPosts = await fetchblogposts();
+            console.log('blogPosts:', blogPosts); // debugging
+            const blogPost = blogPosts.find(blogPost => blogPost.id === blogPostId);
+            showEditBlogPostModal(blogPost);
+            updateBlogPostsTable();
+        }
+    });
+});
+
+async function fetchblogposts() {
+    try {
+        const response = await fetch('http://localhost:8080/blogposts/all');
+        const blogPosts = await response.json();
+        return blogPosts;
+    } catch (error) {
+        console.error('Error fetching blog posts:', error);
+        return null;
+    }
 }
+async function fetchBlogPostById(blogPostId) {
+    const response = await fetch(`http://localhost:8080/blogposts/${blogPostId}`);
+    const blogPost = await response.json();
+    return blogPost;
+}
+
 
 async function createBlogPost(event) {
     event.preventDefault();
@@ -18,9 +54,7 @@ async function createBlogPost(event) {
     const content = document.querySelector('#content').value;
     const imageUrl = document.querySelector('#imageUrl').value;
     const fileUrl = document.querySelector('#fileUrl').value;
-
     const blogPost = {title, content, imageUrl, fileUrl};
-
     try {
         const response = await fetch('http://localhost:8080/blogposts/create', {
             method: 'POST',
@@ -42,10 +76,6 @@ async function createBlogPost(event) {
     }
 }
 
-document.querySelector('#createBlogPostModal').addEventListener('submit', createBlogPost);
-
-
-const editBlogPostModal = document.querySelector('#editBlogPostModal');
 
 async function showEditBlogPostModal(blogPostId) {
     const blogPost = await fetchBlogPostById(blogPostId);
@@ -55,7 +85,6 @@ async function showEditBlogPostModal(blogPostId) {
     document.querySelector('#updateBlogPostForm [name="imageUrl"]').value = blogPost.imageUrl;
     document.querySelector('#updateBlogPostForm [name="fileUrl"]').value = blogPost.fileUrl;
     document.querySelector('#editBlogPostModal').style.display = 'block';
-
     // Add event listener to the Update button in the edit modal
     document.querySelector('#updateBlogPostButton').addEventListener('click', handleUpdateBlogPostFormSubmit);
 }
@@ -73,15 +102,9 @@ async function handleUpdateBlogPostFormSubmit(event) {
         await fetchblogposts();
         updateBlogPostsTable();
         window.location.reload();
-
     }
 }
 
-async function fetchBlogPostById(blogPostId) {
-    const response = await fetch(`http://localhost:8080/blogposts/${blogPostId}`);
-    const blogPost = await response.json();
-    return blogPost;
-}
 
 async function updateBlogPost(event) {
     const form = editBlogPostModal.querySelector('form');
@@ -90,16 +113,13 @@ async function updateBlogPost(event) {
     const content = form.elements['content'].value;
     const imageUrl = form.elements['imageUrl'].value;
     const fileUrl = form.elements['fileUrl'].value;
-
     const blogPost = {blogPostId, title, content, imageUrl, fileUrl};
-
     try {
         const response = await fetch(`http://localhost:8080/blogposts/edit/${blogPostId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(blogPost),
+            }, body: JSON.stringify(blogPost),
         });
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -113,21 +133,117 @@ async function updateBlogPost(event) {
     }
 }
 
-document.querySelector('#editBlogPostModal form').addEventListener('submit', updateBlogPost);
-createBlogPostButton.addEventListener('click', showCreateBlogPostModal);
+async function updateBlogPostsTable() {
+    try {
+        const blogPosts = await fetchblogposts();
+        const blogPostsTableBody = document.querySelector('#blogPostsTable tbody');
+        blogPostsTableBody.innerHTML = '';
 
-blogPostsTable.addEventListener('click', async (event) => {
-    blogPostsTable.addEventListener('click', async (event) => {
-        if (event.target.classList.contains('editBlogPostButton')) {
-            const blogPostId = event.target.dataset.blogpostid;
-            console.log('blogPostId:', blogPostId); // debugging
-            const blogPosts = await fetchblogposts();
-            console.log('blogPosts:', blogPosts); // debugging
-            const blogPost = blogPosts.find(blogPost => blogPost.id === blogPostId);
-            showEditBlogPostModal(blogPost);
-            updateBlogPostsTable();
+        blogPosts.forEach((blogPost, index) => {
+            const blogPostRow = `
+        <tr class="${index % 2 === 0 ? 'even' : 'odd'}">
+          <td>${blogPost.blogPostId}</td>
+          <td>${blogPost.title}</td>
+          <td>${blogPost.content}</td>
+          <td>${blogPost.imageUrl}</td>
+          <td>${blogPost.fileUrl}</td>
+          <td>${blogPost.createdAt}</td>
+          <td>
+            <button class="editBlogPostButton" data-blogpostid="${blogPost.blogPostId}">Edit</button>
+            <button class="deleteBlogPostButton" data-blogpostid="${blogPost.blogPostId}">Delete</button>
+          </td>
+        </tr>
+      `;
+            blogPostsTableBody.insertAdjacentHTML('beforeend', blogPostRow);
+        });
+
+        console.log('Blog posts table updated.');
+
+        // Add event listeners to the Edit and Delete buttons in each row
+        const editButtons = document.querySelectorAll('.editBlogPostButton');
+        const deleteButtons = document.querySelectorAll('.deleteBlogPostButton');
+
+        editButtons.forEach((button) => {
+            button.addEventListener('click', async (event) => {
+                const blogPostId = event.target.getAttribute('data-blogpostid');
+                await showEditBlogPostModal(blogPostId);
+            });
+        });
+
+        deleteButtons.forEach((button) => {
+            button.addEventListener('click', async (event) => {
+                const blogPostId = event.target.getAttribute('data-blogpostid');
+                await deleteBlogPost(blogPostId);
+                await fetchblogposts();
+                updateBlogPostsTable();
+            });
+        });
+    } catch (error) {
+        console.error('Error updating blog posts table:', error);
+    }
+}
+//TODO: Remove unecessary endpoints, del
+async function deleteBlogPost(blogPostId) {
+    try {
+        const response = await fetch(`http://localhost:8080/blogposts/del/${blogPostId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        updateBlogPostsTable();
+        return true;
+    } catch (error) {
+        console.error(`Error deleting blog post with ID ${blogPostId}:`, error);
+        return false;
+    }
+}
+
+async function handleDeleteBlogPostButtonClick(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const blogPostId = event.target.dataset.blogpostid;
+    const deleteConfirmationMessage = document.querySelector('#deleteConfirmationMessage');
+
+    if (!deleteConfirmationMessage) {
+        console.error('Error: delete confirmation message element not found.');
+        return;
+    }
+
+    deleteConfirmationMessage.style.display = 'block';
+
+    const confirmDeleteButton = document.querySelector('#confirmDeleteButton');
+    confirmDeleteButton.addEventListener('click', async () => {
+        const success = await deleteBlogPost(blogPostId);
+
+        if (success) {
+            console.log(`Blog post with ID ${blogPostId} deleted successfully.`);
+            deleteConfirmationMessage.style.display = 'none';
+            await updateBlogPostsTable();
+        } else {
+            console.error(`Error deleting blog post with ID ${blogPostId}.`);
+            deleteConfirmationMessage.style.display = 'none';
         }
     });
-});
 
+    const cancelDeleteButton = document.querySelector('#cancelDeleteButton');
+    cancelDeleteButton.addEventListener('click', () => {
+        deleteConfirmationMessage.style.display = 'none';
+    });
+    window.location.reload();
+}
 
+function showCreateBlogPostModal() {
+    createBlogPostModal.style.display = 'block';
+}
+function hideEditBlogPostModal() {
+    document.querySelector('#editBlogPostModal').style.display = 'none';
+}
+
+window.onload = async function () {
+    await updateBlogPostsTable();
+};
