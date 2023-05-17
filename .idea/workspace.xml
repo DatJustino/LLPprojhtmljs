@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="Commissions need to fix the create function, i believe the fix is about an error 415 when creating new commissions, the edit button is also malfunctioning but almost there.">
+    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="refactored names so all lowercase for commission because of bugs, Crud functions work for commission, course and blog.">
+      <change afterPath="$PROJECT_DIR$/css/adminstyles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/admin/adminindexjs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commissions/commissions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commissions/commissions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blog/createblogpost.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/adminblogposts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/courses/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/admincourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/admincommissions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/adminindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminblog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/commissions/commissions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admincommissions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admincourse.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -62,10 +68,11 @@
       <recent name="$PROJECT_DIR$/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\js\admin" />
+      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\admin" />
       <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\commissions" />
       <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\commissions.html" />
       <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\blog" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -91,7 +98,7 @@
       <workItem from="1684138679031" duration="14950000" />
       <workItem from="1684183768958" duration="733000" />
       <workItem from="1684224497304" duration="12673000" />
-      <workItem from="1684319072958" duration="2459000" />
+      <workItem from="1684319072958" duration="7429000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD for blogpost admin page is working.">
       <created>1683636607853</created>
@@ -121,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684007006915</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactored names so all lowercase for commission because of bugs, Crud functions work for commission, course and blog.">
+      <created>1684321718564</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684321718564</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,22 +157,7 @@
     <MESSAGE value="Create read and delete now works for courses, input is not being input correctly. Blogadmin is done." />
     <MESSAGE value="beginning on commisions, blog and courses adminpage are done." />
     <MESSAGE value="Commissions need to fix the create function, i believe the fix is about an error 415 when creating new commissions, the edit button is also malfunctioning but almost there." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commissions need to fix the create function, i believe the fix is about an error 415 when creating new commissions, the edit button is also malfunctioning but almost there." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/script.js</url>
-          <line>56</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/script.js</url>
-          <line>65</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="refactored names so all lowercase for commission because of bugs, Crud functions work for commission, course and blog." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored names so all lowercase for commission because of bugs, Crud functions work for commission, course and blog." />
   </component>
 </project>

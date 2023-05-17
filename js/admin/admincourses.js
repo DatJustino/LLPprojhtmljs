@@ -1,6 +1,9 @@
 "use strict";
 
-console.log('courses.js loaded');
+console.log('admincourses.js loaded');
+
+const endpoint = "http://localhost:8080/admin/courses";
+
 
 const coursesTable = document.querySelector('#coursesTable');
 const editCourseModal = document.querySelector('#editCourseModal');
@@ -39,7 +42,7 @@ coursesTable.addEventListener('click', async (event) => {
 // Function to fetch all courses
 async function fetchCourses() {
     try {
-        const response = await fetch('http://localhost:8080/courses/all');
+        const response = await fetch(`${endpoint}`);
         /*        if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }*/
@@ -52,7 +55,7 @@ async function fetchCourses() {
 }
 
 async function fetchCourseById(courseId) {
-    const response = await fetch(`http://localhost:8080/courses/${courseId}`);
+    const response = await fetch(`${endpoint}/${courseId}`);
     const course = await response.json();
     return course;
 }
@@ -76,7 +79,7 @@ async function createCourse(event) {
     const course = {courseName, courseImageUrl, courseDescription};
 
     try {
-        const response = await fetch('http://localhost:8080/courses/create', {
+        const response = await fetch(`${endpoint}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -131,7 +134,7 @@ async function updateCourse(event) {
     const courseDescription = form.elements['courseDescription'].value;
     const course = {courseId, courseName, courseImageUrl, courseDescription};
     try {
-        const response = await fetch(`http://localhost:8080/courses/edit/${courseId}`, {
+        const response = await fetch(`${endpoint}/${courseId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -277,7 +280,7 @@ async function updateCoursesTable() {
 
 async function deleteCourse(courseId) {
     try {
-        const response = await fetch(`http://localhost:8080/courses/${courseId}`, {
+        const response = await fetch(`${endpoint}/${courseId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

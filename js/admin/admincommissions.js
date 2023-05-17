@@ -1,6 +1,6 @@
 "use strict";
 
-const endpoint = "http://localhost:8080/commissions";
+const endpoint = "http://localhost:8080/admin/commissions";
 let commissions;
 let currentCommissionId;
 
@@ -63,7 +63,7 @@ function handleCreateCommission(event) {
 async function createCommission(commissionData) {
     const formData = createFormData(commissionData);
 
-    const response = await fetch(`${endpoint}/create`, {
+    const response = await fetch(`${endpoint}`, {
         method: "POST",
         body: formData,
     });
