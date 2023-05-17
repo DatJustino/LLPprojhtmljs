@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="beginning on commisions, blog and courses adminpage are done.">
+    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="Commissions need to fix the create function, i believe the fix is about an error 415 when creating new commissions, the edit button is also malfunctioning but almost there.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/commissions/commissions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commissions/commissions.html" afterDir="false" />
     </list>
@@ -19,6 +20,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -34,24 +36,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/home/veronica/IdeaProjects/javascript/LLPprojhtmljs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/veronica/IdeaProjects/javascript/LLPprojhtmljs&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/css" />
@@ -82,7 +86,12 @@
       <workItem from="1683716469927" duration="6914000" />
       <workItem from="1683801155042" duration="8811000" />
       <workItem from="1683886258908" duration="220000" />
-      <workItem from="1683886513617" duration="28719000" />
+      <workItem from="1683886513617" duration="28766000" />
+      <workItem from="1684087572525" duration="612000" />
+      <workItem from="1684138679031" duration="14950000" />
+      <workItem from="1684183768958" duration="733000" />
+      <workItem from="1684224497304" duration="12673000" />
+      <workItem from="1684319072958" duration="2459000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD for blogpost admin page is working.">
       <created>1683636607853</created>
@@ -105,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683978487043</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commissions need to fix the create function, i believe the fix is about an error 415 when creating new commissions, the edit button is also malfunctioning but almost there.">
+      <created>1684007006914</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684007006915</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +142,23 @@
     <MESSAGE value="CRUD for blogpost admin page is working." />
     <MESSAGE value="Create read and delete now works for courses, input is not being input correctly. Blogadmin is done." />
     <MESSAGE value="beginning on commisions, blog and courses adminpage are done." />
-    <option name="LAST_COMMIT_MESSAGE" value="beginning on commisions, blog and courses adminpage are done." />
+    <MESSAGE value="Commissions need to fix the create function, i believe the fix is about an error 415 when creating new commissions, the edit button is also malfunctioning but almost there." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commissions need to fix the create function, i believe the fix is about an error 415 when creating new commissions, the edit button is also malfunctioning but almost there." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/script.js</url>
+          <line>56</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/script.js</url>
+          <line>65</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
