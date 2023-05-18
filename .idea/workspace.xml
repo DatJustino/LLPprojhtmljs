@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="refactored names so all lowercase for commission because of bugs, Crud functions work for commission, course and blog.">
-      <change afterPath="$PROJECT_DIR$/css/adminstyles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/admin/adminindexjs.js" afterDir="false" />
+    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="admin = courses, commissions and blogposts are now updated, both in backend and frontend, new pathways, small refactorings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/blog/createblogpost.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/adminblogposts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/courses/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/admincourses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/admincommissions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/adminindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminblog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commissions/commissions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admincommissions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/courses/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admincourse.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +89,8 @@
       <workItem from="1684138679031" duration="14950000" />
       <workItem from="1684183768958" duration="733000" />
       <workItem from="1684224497304" duration="12673000" />
-      <workItem from="1684319072958" duration="7429000" />
+      <workItem from="1684319072958" duration="7539000" />
+      <workItem from="1684405321795" duration="1238000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD for blogpost admin page is working.">
       <created>1683636607853</created>
@@ -135,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684321718564</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="admin = courses, commissions and blogposts are now updated, both in backend and frontend, new pathways, small refactorings">
+      <created>1684329483878</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684329483878</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +157,7 @@
     <MESSAGE value="beginning on commisions, blog and courses adminpage are done." />
     <MESSAGE value="Commissions need to fix the create function, i believe the fix is about an error 415 when creating new commissions, the edit button is also malfunctioning but almost there." />
     <MESSAGE value="refactored names so all lowercase for commission because of bugs, Crud functions work for commission, course and blog." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored names so all lowercase for commission because of bugs, Crud functions work for commission, course and blog." />
+    <MESSAGE value="admin = courses, commissions and blogposts are now updated, both in backend and frontend, new pathways, small refactorings" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin = courses, commissions and blogposts are now updated, both in backend and frontend, new pathways, small refactorings" />
   </component>
 </project>
