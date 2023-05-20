@@ -5,7 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="admin = courses, commissions and blogposts are now updated, both in backend and frontend, new pathways, small refactorings">
+      <change afterPath="$PROJECT_DIR$/templates/main/courses.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLPprojhtmljs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LLPprojhtmljs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-courses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-portraits.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/navbar-header.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navbar-header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/illustrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/illustrations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Arbejdsmand.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Bager boller.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Case 1 Dukken med til samling.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Case 2 Den lille nye pige i vuggestuen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Case 3 Morgensamling i vuggestuen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Case 4 At vælge mellem to børns behov.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Case 5 Ventetid.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Case 6 Hugo vil ikke lege med mig.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Case 7 Rutsjebanen og regler.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Case 8 Tis af, vask fingre og find jeres madpakker.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Julekort.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Kænguru (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Nikkende kobjælde.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/Sicilien engel_edited-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/illus/SvanePLAKAT.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/60 babyer plakat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/A plakat cr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/Børneperspektiver forside.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/Dame m cello.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/Gulerødder udsnit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/Kultur Amt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/Kænguru.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/Look Cook Eat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/Look OOk Eat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/RAS badge.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/misc/Udsnit med kort.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/portrætter/4 årig hel tegning sh LEVcr_edited-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/portrætter/Båret barn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/portrætter/Emilie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/portrætter/Freja og El færdig tegning.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/portrætter/Klara.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/portrætter/Matilde.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lonebilleder/portrætter/Pige tegning1000 L sh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/adminindexjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/adminindexjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/adminCourses.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/adminPortraits.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/commissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/commissions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/commissions/commissions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/customerPortraits.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/customerPortraits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/adminblog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminblog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/admincommissions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admincommissions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/admincourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admincourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/adminindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fragments/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +69,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -42,7 +96,7 @@
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/veronica/IdeaProjects/javascript/LLPprojhtmljs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/super/IdeaProjects/LLProjhtmljs/LLPprojhtmljs/images&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -55,15 +109,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\images" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\js" />
+      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\main" />
+      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates" />
       <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\js\admin" />
       <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\admin" />
-      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\commissions" />
-      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\commissions.html" />
-      <recent name="C:\Users\super\IdeaProjects\LLProjhtmljs\LLPprojhtmljs\templates\blog" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,7 +145,8 @@
       <workItem from="1684183768958" duration="733000" />
       <workItem from="1684224497304" duration="12673000" />
       <workItem from="1684319072958" duration="7539000" />
-      <workItem from="1684405321795" duration="1238000" />
+      <workItem from="1684405321795" duration="23105000" />
+      <workItem from="1684497488513" duration="1435000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD for blogpost admin page is working.">
       <created>1683636607853</created>
@@ -134,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684329483878</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="admin = courses, commissions and blogposts are now updated, both in backend and frontend, new pathways, small refactorings">
+      <created>1684407161708</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684407161708</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

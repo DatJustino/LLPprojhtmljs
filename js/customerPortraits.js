@@ -43,8 +43,9 @@ function showPost(postObject) {
     console.log(postObject.imageName)
     const html = /*html*/ `
         <article class="grid-item">
-            <img src="${postObject.image}" />
+            <img src="${postObject.imageName}" />
             <h3>${postObject.imageName}</h3>
+            <p>${postObject.imageDescription}</p>
             <p></p>
         </article>
     `; // html variable to hold generated html in backtick

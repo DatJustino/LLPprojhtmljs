@@ -15,19 +15,33 @@ ul {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.image-gallery {
+     display: grid;
+     grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+     grid-gap: 10px;
+     max-height: 1000px; /* Adjust the maximum height as needed */
+ }
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
 }
 
 /* Header and navigation */
+/*
 header {
     background-color: #4a4e5d;
     padding: 1rem;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-}
+
 
 nav ul li {
     display: inline;
@@ -37,6 +51,7 @@ nav ul li {
 nav ul li:last-child {
     margin-right: 0;
 }
+*/
 
 /* Sections */
 section {
