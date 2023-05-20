@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    color: #FF4500; /* Orange-Red color */
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #FF4500; /* Orange-Red color */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Header and navigation */
+header {
+    background-color: #FF4500; /* Orange-Red color */
+    padding: 1rem;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+/* Sections */
+section {
+    margin: 2rem 0;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+form button {
+    background-color: #FF4500; /* Orange-Red color */
+    color: #fff;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* Commission Table */
+.styled-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.styled-table th {
+    background-color: #FF4500; /* Orange-Red color */
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.styled-table td {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 12px;
+    color: #666;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:last-of-type td {
+    border-bottom: none;
+}
+
+/* Buttons */
+.btn {
+    background-color: #FF4500; /* Orange-Red color */
+    border: none;
+    padding: 6px 12px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.btn-edit {
+    color: #007bff;
+    margin-right: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn-delete {
+    color: #dc3545;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background-color: #FF6347; /* Tomato color */
+}
+
+.btn-edit:hover {
+    color: #fff;
+}
+
+/* Create Commission Form */
+#create-commission-dialog {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#create-commission-form label {
+    color: #FF4500; /* Orange-Red color */
+}
+
+/* Edit Commission Form */
+#update-commission-dialog {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#update-commission-form label {
+    color: #FF4500; /* Orange-Red color */
+}
+
+/* Delete Confirmation Modal */
+#delete-commission-dialog {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#delete-commission-form button.btn-cancel {
+    background-color: #ddd;
+    color: #FF4500; /* Orange-Red color */
+    margin-right: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+#delete-commission-form button.btn-cancel:hover {
+    background-color: #ccc;
+}
+
+#delete-commission-form button {
+    background-color: #FF4500; /* Orange-Red color */
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
