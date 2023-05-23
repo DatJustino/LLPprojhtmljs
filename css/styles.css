@@ -1,12 +1,144 @@
-/* General styles */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+
+   THIS IS A RESETTER so that all browsers will have the same starting point.
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 body {
-    font-family: Arial, sans-serif;
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* General styles */
+html {
+    /*
+    color: #333333;
+    */
+    font-size: 16px;
+}
+
+body {
     line-height: 1.6;
+    background: #333333;
+    font-family: 'Rockwell Nova', sans-serif;
+
+}
+
+header {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Gill Sans', sans-serif;
+    color: #2B9EB3;
+    text-align: center;
+
 }
 
 h2 {
-    margin-bottom: 1rem;
+    font-size: 30px; /* Adjusted font-size */
+    font-weight: bold;
+    font-family: 'Gill Sans', sans-serif;
+    color: #1caf1e;
+    text-align: center;
+    margin-bottom: 10px; /* Added margin-bottom */
 }
+
+h3 {
+    font-size: 28px; /* Adjusted font-size */
+    font-weight: bold;
+    font-family: 'Gill Sans', sans-serif;
+    color: #23b3ce;
+    text-align: center;
+    margin-bottom: 10px; /* Added margin-bottom */
+}
+
+p {
+    font-size: 24px;
+    font-family: 'Rockwell Nova', sans-serif;
+}
+
+
+#preheader {
+    margin-top: 10px;
+    text-align: left;
+    font-family: 'Gill Sans', sans-serif;
+    background: #333333;
+    padding: 10px;
+    font-size: 26px;
+
+    border-color: #007c91;
+}
+
+pre {
+    background: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    border-color: #007c91;
+    overflow: visible;
+}
+
+#createCommissionButton {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
 ul {
     list-style-type: none;
@@ -17,45 +149,50 @@ a {
     text-decoration: none;
     color: #ffffff;
 }
+
 nav {
     display: flex;
     justify-content: center;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    color: #333333;
+    align: start;
+    padding: 5% 25% 25% 25%
+
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
 .image-gallery {
-     display: grid;
-     grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
-     grid-gap: 10px;
-     max-height: 1000px; /* Adjust the maximum height as needed */
- }
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+    grid-gap: 10px;
+    max-height: 1000px; /* Adjust the maximum height as needed */
+    color: #333333;
+
+}
 
 .image-gallery img {
     width: 100%;
     height: auto;
 }
 
-/* Header and navigation */
-/*
-header {
-    background-color: #4a4e5d;
-    padding: 1rem;
-}
-
-
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-*/
-
-/* Sections */
 section {
     margin: 2rem 0;
+
+
+}
+
+#about {
+    margin: 0 20% 20% 20%;
+
 }
 
 /* Forms */
@@ -76,6 +213,7 @@ form button {
     padding: 0.5rem;
     cursor: pointer;
 }
+
 .styled-table {
     border-collapse: collapse;
     width: 100%;
@@ -99,6 +237,59 @@ form button {
     border-bottom: 1px solid #f2f2f2;
     padding: 12px;
     color: #666;
+}
+
+#adminBlogPostContent {
+    max-width: 300px;
+    overflow: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.blog-post {
+    margin: 0 20% 10% 20%;
+    display: flex;
+    flex-direction: column;
+    /*
+    align-items: center;
+    */
+}
+
+.blog-post .imgBlogPost {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.blogPostDate{
+    color: #d0b273;
+}
+#blog-overview {
+    margin: 0 20% 20% 20%;
+}
+
+.blogPostDescription {
+font-weight: bold;
+    text-align: center;
+}
+
+.truncatedContent {
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show 3 lines of content */
+    -webkit-box-orient: vertical;
+}
+
+.overviewBlogPostContent {
+    max-width: 300px;
+    overflow: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.blogPostContent {
+text-align: center;
 }
 
 .styled-table tbody tr:nth-of-type(even) {

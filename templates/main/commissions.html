@@ -6,10 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/navbar-header.css">
     <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/modal.css">
 </head>
 <body>
+<header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>I would love to take commissions from everyone and make portraits or illustrations.</p>
+    <p>Send me a request below using the "Create Commission" button, and include a picture of what you would like to be
+        drawn.</p>
+    <p>If possible, each commission takes about 14 days to finish. You can either pick up the portrait at my place in
+        Roskilde or have it sent via mail.</p>
+</header>
 
 
+<!-- Rest of the HTML code -->
+
+
+<button id="createCommissionButton">Create Commission</button>
+<dialog id="create-commission-dialog">
+    <h2>Create Commission</h2>
+    <form id="create-commission-form" method="dialog">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required><br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required><br>
+        <label for="phonenumber">Phone Number:</label>
+        <input type="text" id="phonenumber" name="phonenumber"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="10" required></textarea><br>
+        <label for="pageformat1">Page Format 1:</label>
+        <input type="text" id="pageformat1" name="pageformat1"><br>
+        <label for="pageformat2">Page Format 2:</label>
+        <input type="text" id="pageformat2" name="pageformat2" required><br>
+        <label for="deliverydate">Delivery Date:</label>
+        <input type="date" id="deliverydate" name="deliverydate" required><br>
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street"><br>
+        <label for="housenumber">House Number:</label>
+        <input type="number" id="housenumber" name="housenumber"><br>
+        <label for="floor">Floor:</label>
+        <input type="text" id="floor" name="floor"><br>
+        <label for="zipcode">Zip Code:</label>
+        <input type="number" id="zipcode" name="zipcode"><br>
+        <label for="imageurl1">Image 1 URL:</label>
+        <input type="text" id="imageurl1" name="imageurl1" required><br>
+        <label for="imageurl2">Image 2 URL:</label>
+        <input type="text" id="imageurl2" name="imageurl2"><br>
+        <label for="imageurl3">Image 3 URL:</label>
+        <input type="text" id="imageurl3" name="imageurl3"><br>
+        <button type="submit">Create</button>
+    </form>
+</dialog>
+
+
+<div class="gallery">
+
+    <img src="../../images/portrætter/comparison-freja_combi.jpg" height="368" width="786"/>
+    <img src="../../images/portrætter/comparison-jasmin_combi.jpg" height="345" width="806"/>
+    <img src="../../images/portrætter/comparison-finnjensen_combi1.jpg" height="368" width="806"/>
+    <!--
+        <img src="../../images/portrætter/comparison-finnjensen_eft.jpg" height="149" width="212"/>
+    -->
+    <img src="../../images/portrætter/comparison-blypcombi (1).jpg" height="328" width="775"/>
+
+    <img src="../../images/portrætter/comparison-Johannefoto72.jpg" height="303" width="400"/>
+    <img src="../../images/portrætter/comparison-joteg72.jpg" height="280" width="400"/>
+    <img src="../../images/portrætter/comparison-mikkelfoto72.jpg" height="400" width="300"/>
+    <img src="../../images/portrætter/comparison-mikkelteg72.jpg" height="426" width="300"/>
+    <!--
+        <img src="../../images/portrætter/portraitBåret barn.jpg" height="685" width="1000"/>
+    --> <img src="../../images/portrætter/comparison-angfoto72.jpg" height="300" width="400"/>
+    <img src="../../images/portrætter/comparison-angteg72.jpg" height="284" width="400"/>
+    <img src="../../images/portrætter/comparison-arbejdshestteg72.jpg" height="280" width="400"/>
+    <img src="../../images/portrætter/comparison-Arbejdshestfoto72.jpg" height="300" width="400"/>
+    <img src="../../images/portrætter/comparison-drengpåtreteg72.jpg" height="290" width="400"/>
+    <img src="../../images/portrætter/comparison-dreng3foto72.jpg" height="354" width="400"/>
+    <img src="../../images/portrætter/comparison-riediamant2.jpg" height="247" width="299"/>
+    <img src="../../images/portrætter/comparison-riediamantTEG.jpg" height="406" width="300"/>
+
+    <img src="../../images/portrætter/portrait4 årig hel tegning sh LEVcr_edited-7.jpg" height="1113" width="802"/>
+    <img src="../../images/portrætter/portraitPige tegning1000 L sh.jpg" height="1350" width="1000"/>
+    <img src="../../images/portrætter/portraitMatilde.jpg" height="698" width="1000"/>
+    <img src="../../images/portrætter/portraitKlara.jpg" height="700" width="1000"/>
+    <img src="../../images/portrætter/portraitFreja og El færdig tegning.jpg" height="863" width="600"/>
+    <img src="../../images/portrætter/portraitEmilie.jpg" height="710" width="1000"/>
+
+</div>
+
+<script src="../../js/commissions.js"></script>
 <script src="../../js/fragments/fragments.js"></script>
 </body>
 </html>

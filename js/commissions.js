@@ -1,83 +1,71 @@
 "use strict";
-console.log('commissions.js loaded');
 
-const endpoint = "https://localhost:8080/admin";
-let commissions;
+const endpoint = "http://localhost:8080/commissions";
 
-window.addEventListener("DOMContentLoaded", initApp);
+window.addEventListener("load", initApp);
 
 function initApp() {
-    updatePostsGrid(); // update the grid of posts: get and show all posts
 
-    // event listener
-    document.querySelector("#create-commission-dialog").addEventListener("click", showCreatePostDialog);
-    document.querySelector("#create-commission-form").addEventListener("submit", createPostClicked);
-    document.querySelector("#form-update-post").addEventListener("submit", updatePostClicked);
-    document.querySelector("#form-delete-post").addEventListener("submit", deletePostClicked);
-    document.querySelector("#delete-commission-form .btn-cancel").addEventListener("click", deleteCancelClicked);
-    document.querySelector("#select-sort-by").addEventListener("change", sortByChanged);
-    document.querySelector("#input-search").addEventListener("keyup", inputSearchChanged);
-    document.querySelector("#input-search").addEventListener("search", inputSearchChanged);
+    document.querySelector("#createCommissionButton").addEventListener("click", showCreateCommissionDialog);
+    document.querySelector("#create-commission-form").addEventListener("submit", handleCreateCommission);
+
+}
+function showCreateCommissionDialog() {
+    document.querySelector("#create-commission-dialog").style.display = "block"; // show create commission dialog
+}
+function hideCreateCommissionModal() {
+    const modal = document.querySelector("#create-commission-dialog");
+    modal.style.display = 'none';
 }
 
-// ============== events ============== //
 
-function showCreatePostDialog() {
-    document.querySelector("#create-commission-dialog").showModal(); // show create dialog
+function handleCreateCommission(event) {
+    showCreateCommissionDialog();
+    event.preventDefault();
+    /*    const form = event.target;*/
+    const form = event.target;
+    const commissionData = {
+        firstname: form.elements.firstname.value,
+        lastname: form.elements.lastname.value,
+        email: form.elements.email.value,
+        phonenumber: form.elements.phonenumber.value,
+        subject: form.elements.subject.value,
+        description: form.elements.description.value,
+        pageformat1: form.elements.pageformat1.value,
+        pageformat2: form.elements.pageformat2.value,
+        deliverydate: form.elements.deliverydate.value,
+        street: form.elements.street.value,
+        housenumber: form.elements.housenumber.value,
+        floor: form.elements.floor.value,
+        zipcode: form.elements.zipcode.value,
+        imageurl1: form.elements.imageurl1.value,
+        imageurl2: form.elements.imageurl2.value,
+        imageurl3: form.elements.imageurl3.value
+    };
+
+    createCommission(commissionData);
+    console.log(form)
+    form.reset();
+    hideCreateCommissionModal();
 }
 
-function createPostClicked(event) {
-    const form = event.target; // or "this"
-    // extract the values from inputs from the form
-    const createFName = form.createFName.value;
-    const createLName = form.createLName.value;
-    const cEmail = form.cEmail.value;
-    const cPhoneNumber = form.cPhoneNumber.value;
+async function createCommission(commissionData) {
+    const formData = createFormData(commissionData);
 
-    createPost(title, body, image); // use values to create a new post
-    form.reset(); // reset the form (clears inputs)
-}
+    const response = await fetch(`${endpoint}`, {
+        method: "POST",
+        body: formData,
+    });
 
-function updatePostClicked(event) {
-    const form = event.target; // or "this"
-    // extract the values from inputs in the form
-    const title = form.title.value;
-    const body = form.body.value;
-    const image = form.image.value;
-    // get id of the post to update - saved in data-id
-    const id = form.getAttribute("data-id");
-    updatePost(id, title, body, image); // call updatePost with arguments
-}
-
-function deletePostClicked(event) {
-    const id = event.target.getAttribute("data-id"); // event.target is the delete form
-    deletePost(id); // call deletePost with id
-}
-
-function deleteCancelClicked() {
-    document.querySelector("#dialog-delete-post").close(); // close dialog
-}
-
-// ============== posts ============== //
-
-async function updatePostsGrid() {
-    posts = await getPosts(); // get posts from rest endpoint and save in variable
-    showPosts(posts); // show all posts (append to the DOM) with posts as argument
-}
-
-// Get all posts - HTTP Method: GET
-async function getPosts() {
-    const response = await fetch(`${endpoint}`); // fetch request, (GET)
-    const data = await response.json(); // parse JSON to JavaScript
-    const posts = prepareData(data); // convert object of object to array of objects
-    return posts; // return posts
-}
-
-function showPosts(listOfPosts) {
-    document.querySelector("#commissions-table").innerHTML = ""; // reset the content of section#posts
-
-    for (const post of listOfPosts) {
-        showPost(post); // for every post object in listOfPosts, call showPost
+    if (response.ok) {
+        console.log("New commission successfully added");
     }
 }
 
+function createFormData(commissionData) {
+    const formData = new FormData();
+    for (const key in commissionData) {
+        formData.append(key, commissionData[key]);
+    }
+    return formData;
+}

@@ -1,7 +1,8 @@
 "use strict";
 
 console.log('adminblogposts.js loaded');
-const endpoint = "http://localhost:8080/admin/blog";
+const endpoint = "http://localhost:8080/admin/blogpost";
+
 
 const blogPostsTable = document.querySelector('#blogPostsTable');
 const editBlogPostModal = document.querySelector('#editBlogPostModal');
@@ -10,7 +11,7 @@ const createBlogPostModal = document.querySelector('#createBlogPostModal');
 
 createBlogPostButton.addEventListener('click', showCreateBlogPostModal);
 
-document.querySelector('#createBlogPostModal').addEventListener('submit', adminblogposts);
+document.querySelector('#createBlogPostModal').addEventListener('submit', adminCreateBlogPosts);
 document.querySelector('#editBlogPostModal form').addEventListener('submit', updateBlogPost);
 
 const deleteConfirmationMessage = document.querySelector('#deleteConfirmationMessage');
@@ -21,17 +22,16 @@ blogPostsTable.addEventListener('click', async (event) => {
     blogPostsTable.addEventListener('click', async (event) => {
         if (event.target.classList.contains('editBlogPostButton')) {
             const blogPostId = event.target.dataset.blogpostid;
-            console.log('blogPostId:', blogPostId); // debugging
             const blogPosts = await fetchBlogPosts();
-            console.log('blogPosts:', blogPosts); // debugging
             const blogPost = blogPosts.find(blogPost => blogPost.id === blogPostId);
             showEditBlogPostModal(blogPost);
             updateBlogPostsTable();
+            form.clear();
         }
     });
 });
 
-async function fetchBlogPosts() {
+    async function fetchBlogPosts() {
     try {
         const response = await fetch(`${endpoint}`);
         const blogPosts = await response.json();
@@ -41,6 +41,7 @@ async function fetchBlogPosts() {
         return null;
     }
 }
+
 async function fetchBlogPostById(blogPostId) {
     const response = await fetch(`${endpoint}/${blogPostId}`);
     const blogPost = await response.json();
@@ -48,14 +49,16 @@ async function fetchBlogPostById(blogPostId) {
 }
 
 
-async function adminblogposts(event) {
+async function adminCreateBlogPosts(event) {
     event.preventDefault();
     createBlogPostModal.style.display = 'block';
+    const headerTitle = document.querySelector('#headerTitle').value;
     const title = document.querySelector('#title').value;
+    const description = document.querySelector('#description').value;
     const content = document.querySelector('#content').value;
     const imageUrl = document.querySelector('#imageUrl').value;
     const fileUrl = document.querySelector('#fileUrl').value;
-    const blogPost = {title, content, imageUrl, fileUrl};
+    const blogPost = {headerTitle, title, description, content, imageUrl, fileUrl};
     try {
         const response = await fetch(`${endpoint}`, {
             method: 'POST',
@@ -71,7 +74,9 @@ async function adminblogposts(event) {
         createBlogPostModal.style.display = 'none';
         await fetchBlogPosts();  // refresh the blog posts
         updateBlogPostsTable();
+/*
         window.location.reload();
+*/
     } catch (error) {
         console.error('Error creating blog post:', error);
     }
@@ -81,7 +86,9 @@ async function adminblogposts(event) {
 async function showEditBlogPostModal(blogPostId) {
     const blogPost = await fetchBlogPostById(blogPostId);
     document.querySelector('#updateBlogPostForm [name="blogPostId"]').value = blogPost.blogPostId;
+    document.querySelector('#updateBlogPostForm [name="headerTitle"]').value = blogPost.headerTitle;
     document.querySelector('#updateBlogPostForm [name="title"]').value = blogPost.title;
+    document.querySelector('#updateBlogPostForm [name="description"]').value = blogPost.description;
     document.querySelector('#updateBlogPostForm [name="content"]').value = blogPost.content;
     document.querySelector('#updateBlogPostForm [name="imageUrl"]').value = blogPost.imageUrl;
     document.querySelector('#updateBlogPostForm [name="fileUrl"]').value = blogPost.fileUrl;
@@ -92,17 +99,21 @@ async function showEditBlogPostModal(blogPostId) {
 
 async function handleUpdateBlogPostFormSubmit(event) {
     const blogPostId = document.querySelector('#updateBlogPostForm [name="blogPostId"]').value;
+    const headerTitle = document.querySelector('#updateBlogPostForm [name="headerTitle"]').value;
     const title = document.querySelector('#updateBlogPostForm [name="title"]').value;
+    const description = document.querySelector('#updateBlogPostForm [name="description"]').value;
     const content = document.querySelector('#updateBlogPostForm [name="content"]').value;
     const imageUrl = document.querySelector('#updateBlogPostForm [name="imageUrl"]').value;
     const fileUrl = document.querySelector('#updateBlogPostForm [name="fileUrl"]').value;
 
-    const updatedBlogPost = await updateBlogPost(blogPostId, title, content, imageUrl, fileUrl);
+    const updatedBlogPost = await updateBlogPost(blogPostId, headerTitle, title, description, content, imageUrl, fileUrl);
     if (updatedBlogPost) {
         hideEditBlogPostModal();
         await fetchBlogPosts();
         updateBlogPostsTable();
+/*
         window.location.reload();
+*/
     }
 }
 
@@ -110,11 +121,13 @@ async function handleUpdateBlogPostFormSubmit(event) {
 async function updateBlogPost(event) {
     const form = editBlogPostModal.querySelector('form');
     const blogPostId = form.elements['blogPostId'].value;
+    const headerTitle = form.elements['headerTitle'].value;
     const title = form.elements['title'].value;
+    const description = form.elements['description'].value;
     const content = form.elements['content'].value;
     const imageUrl = form.elements['imageUrl'].value;
     const fileUrl = form.elements['fileUrl'].value;
-    const blogPost = {blogPostId, title, content, imageUrl, fileUrl};
+    const blogPost = {blogPostId, headerTitle, title,description, content, imageUrl, fileUrl};
     try {
         const response = await fetch(`${endpoint}/${blogPostId}`, {
             method: 'PUT',
@@ -144,8 +157,10 @@ async function updateBlogPostsTable() {
             const blogPostRow = `
         <tr class="${index % 2 === 0 ? 'even' : 'odd'}">
           <td>${blogPost.blogPostId}</td>
+          <td>${blogPost.headerTitle}</td>
           <td>${blogPost.title}</td>
-          <td>${blogPost.content}</td>
+          <td>${blogPost.description}</td>
+          <td id="adminBlogPostContent">${blogPost.content}</td>
           <td>${blogPost.imageUrl}</td>
           <td>${blogPost.fileUrl}</td>
           <td>${blogPost.createdAt}</td>
@@ -157,7 +172,6 @@ async function updateBlogPostsTable() {
       `;
             blogPostsTableBody.insertAdjacentHTML('beforeend', blogPostRow);
         });
-
         console.log('Blog posts table updated.');
 
         // Add event listeners to the Edit and Delete buttons in each row
@@ -183,7 +197,8 @@ async function updateBlogPostsTable() {
         console.error('Error updating blog posts table:', error);
     }
 }
-//TODO: Remove unecessary endpoints, del
+
+
 async function deleteBlogPost(blogPostId) {
     try {
         const response = await fetch(`${endpoint}/${blogPostId}`, {
@@ -235,12 +250,15 @@ async function handleDeleteBlogPostButtonClick(event) {
     cancelDeleteButton.addEventListener('click', () => {
         deleteConfirmationMessage.style.display = 'none';
     });
+/*
     window.location.reload();
+*/
 }
 
 function showCreateBlogPostModal() {
     createBlogPostModal.style.display = 'block';
 }
+
 function hideEditBlogPostModal() {
     document.querySelector('#editBlogPostModal').style.display = 'none';
 }
