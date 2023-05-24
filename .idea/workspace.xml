@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="html and js changes, added pictures">
-      <change afterPath="$PROJECT_DIR$/js/blog/blog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/blog/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/blog/post.html" afterDir="false" />
+    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="blogpost now functional, rustic styling added, but functionality works">
+      <change afterPath="$PROJECT_DIR$/js/course.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/navbar-header.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navbar-header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/admin/adminblogposts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/adminBlogPosts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/commissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/commissions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/adminblog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminblog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/admincourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/admincourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blog/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/blog/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blog/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/blog/post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/blog/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/commissions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/commissions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/courses.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +101,8 @@
       <workItem from="1684319072958" duration="7539000" />
       <workItem from="1684405321795" duration="23105000" />
       <workItem from="1684497488513" duration="14884000" />
-      <workItem from="1684736188019" duration="38455000" />
+      <workItem from="1684736188019" duration="41800000" />
+      <workItem from="1684918240121" duration="11069000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD for blogpost admin page is working.">
       <created>1683636607853</created>
@@ -170,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684576303698</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="blogpost now functional, rustic styling added, but functionality works">
+      <created>1684868325943</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684868325943</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +200,8 @@
     <MESSAGE value="admin = courses, commissions and blogposts are now updated, both in backend and frontend, new pathways, small refactorings" />
     <MESSAGE value="new image directory with differential names, upload files to db, update to admin, navbar and illustrations, admin sites are updated" />
     <MESSAGE value="html and js changes, added pictures" />
-    <option name="LAST_COMMIT_MESSAGE" value="html and js changes, added pictures" />
+    <MESSAGE value="blogpost now functional, rustic styling added, but functionality works" />
+    <option name="LAST_COMMIT_MESSAGE" value="blogpost now functional, rustic styling added, but functionality works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -204,7 +209,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/commissions.js</url>
           <line>18</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

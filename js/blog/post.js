@@ -59,6 +59,7 @@ function renderBlogPost(data) {
 
     var blogPostDate = document.createElement('p');
     blogPostDate.textContent = formattedDate;
+    blogPostDate.classList.add('blogPostDate'); // Add specific class
     blogPostDiv.appendChild(blogPostDate);
 
     var blogImg = document.createElement('img');
@@ -98,14 +99,26 @@ function renderComments(comments) {
         var commentDiv = document.createElement('div');
         commentDiv.classList.add('comment');
 
-        var userName = document.createElement('p');
-        userName.textContent = 'Username: ' + comment.userName;
-        commentDiv.appendChild(userName);
+        var commentHeaderDiv = document.createElement('div');
+        commentHeaderDiv.classList.add('comment-header');
+
+        var userName = document.createElement('h4');
+        userName.classList.add('author');
+        userName.innerText = comment.userName;
+        commentHeaderDiv.appendChild(userName);
+
+        var commentTime = document.createElement('span');
+        commentTime.classList.add('time');
+        var date = new Date(comment.createdAt);  // assuming comment object has createdAt attribute
+        commentTime.innerText = date.toLocaleString();
+        commentHeaderDiv.appendChild(commentTime);
 
         var commentContent = document.createElement('p');
-        commentContent.textContent = comment.content;
-        commentDiv.appendChild(commentContent);
+        commentContent.classList.add('comment-content');
+        commentContent.innerText = comment.content;
 
+        commentDiv.appendChild(commentHeaderDiv);
+        commentDiv.appendChild(commentContent);
         commentsDiv.appendChild(commentDiv);
     });
 }

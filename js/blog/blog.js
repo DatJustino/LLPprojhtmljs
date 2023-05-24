@@ -27,7 +27,7 @@ window.onload = function () {
                         </div>
                         </div>
                         <p class="truncatedContent">${post.content}</p>
-                        <a href="post.html?id=${post.blogPostId}">Read more</a></div>
+                        <a class="readMoreLink" href="post.html?id=${post.blogPostId}">Read more</a></div>
                     </div>
                 `;
                 document.getElementById('blog-overview').innerHTML += blogPostHtml;

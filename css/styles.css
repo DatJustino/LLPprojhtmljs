@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    padding: 0 20% 20% 20%;
 }
 ol, ul {
     list-style: none;
@@ -52,79 +53,99 @@ table {
 
 /* General styles */
 html {
-    /*
-    color: #333333;
-    */
-    font-size: 16px;
+    background-color: #383838;
 }
 
 body {
     line-height: 1.6;
-    background: #333333;
     font-family: 'Rockwell Nova', sans-serif;
-
 }
 
 header {
     margin-top: 20px;
+    margin-bottom: 30px;
     text-align: center;
     font-family: 'Gill Sans', sans-serif;
-
 }
 
 h1 {
     font-size: 48px;
     font-weight: bold;
     font-family: 'Gill Sans', sans-serif;
-    color: #2B9EB3;
+    color: rgb(120, 140, 165); /* Header color */
     text-align: center;
-
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 h2 {
     font-size: 30px; /* Adjusted font-size */
     font-weight: bold;
     font-family: 'Gill Sans', sans-serif;
-    color: #1caf1e;
+    color: rgb(120, 140, 165); /* Header color */
     text-align: center;
     margin-bottom: 10px; /* Added margin-bottom */
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 h3 {
     font-size: 28px; /* Adjusted font-size */
     font-weight: bold;
     font-family: 'Gill Sans', sans-serif;
-    color: #23b3ce;
+    color: rgb(120, 140, 165); /* Header color */
     text-align: center;
     margin-bottom: 10px; /* Added margin-bottom */
+}
+
+h4 {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Gill Sans', sans-serif;
+    color: rgb(143, 111, 39);
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 p {
     font-size: 24px;
     font-family: 'Rockwell Nova', sans-serif;
+    color: rgb(119, 110, 95); /* Paragraph color */
 }
 
+#blog-post img {
+    display: block;
+    margin-bottom: 30px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
 
 #preheader {
     margin-top: 10px;
     text-align: left;
     font-family: 'Gill Sans', sans-serif;
-    background: #333333;
+    background: #383838;
     padding: 10px;
     font-size: 26px;
-
     border-color: #007c91;
 }
 
 pre {
-    background: #333333;
-    color: #ffffff;
+/*    background: #333333;
+    color: #ffffff;*/
+    /*
     padding: 20px;
+    */
     text-align: center;
     font-size: 24px;
+    /*
     border-radius: 5px;
+    */
     border-color: #007c91;
+    /*
     overflow: visible;
+    */
 }
 
 #createCommissionButton {
@@ -161,7 +182,7 @@ nav {
     grid-gap: 30px;
     color: #333333;
     align: start;
-    padding: 5% 25% 25% 25%
+    padding: 5% 10% 10% 10%
 
 }
 
@@ -183,16 +204,58 @@ nav {
     width: 100%;
     height: auto;
 }
-
+/*
 section {
     margin: 2rem 0;
-
-
+}*/
+#about {
+    color: rgb(119, 110, 95);
+}
+#aboutImg{
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+}
+.course-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#about {
-    margin: 0 20% 20% 20%;
+.course {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
 
+.course .content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.course img {
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+}
+
+.course .text-content {
+    max-width: 70%;
+}
+
+.course h2 {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.course p {
+    font-size: 16px;
 }
 
 /* Forms */
@@ -205,6 +268,8 @@ form input,
 form textarea {
     margin-bottom: 1rem;
     padding: 0.5rem;
+    background: #816565;
+
 }
 
 form button {
@@ -247,12 +312,8 @@ form button {
 }
 
 .blog-post {
-    margin: 0 20% 10% 20%;
     display: flex;
     flex-direction: column;
-    /*
-    align-items: center;
-    */
 }
 
 .blog-post .imgBlogPost {
@@ -260,11 +321,29 @@ form button {
     height: auto;
     margin-bottom: 10px;
 }
-.blogPostDate{
+.blogPostDate {
     color: #d0b273;
+    margin-bottom: 20px;
 }
-#blog-overview {
-    margin: 0 20% 20% 20%;
+
+.readMoreLink{
+    color: #d0b273;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    background: #273433;
 }
 
 .blogPostDescription {
