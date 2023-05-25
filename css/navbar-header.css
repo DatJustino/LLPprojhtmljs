@@ -1,16 +1,15 @@
 /* Header/logo Title */
-header {
-    font-family: 'Gill Sans', sans-serif;
+header { /*det er det her som body skal have, basis layout, men den styler ikke fragmenterne
+hvis det ikke ligger her åbenbart*/
+    font-family: Arial, Helvetica, sans-serif;;
     margin: 0;
-    background-color: #383838;
-    color: rgb(120, 140, 165); /* Header color */
+    background-color: #333;
+    color: #f2f2f2;
 }
-
 .header {
-    padding: 3px;
+    padding: 40px;
     text-align: center;
 }
-
 #portrait-span{
     padding: 0 20px 0 20px;
     font-weight: bold;
@@ -29,7 +28,7 @@ header {
 /* Style the navigation bar links */
 .navbar a {
     color: #f2f2f2;
-    padding: 7px 10px;
+    padding: 14px 30px;
     text-decoration: none;
     text-align: center;
 }
