@@ -147,9 +147,9 @@ function showCommission(commissionObject) {
   <td>${commissionObject.housenumber}</td>
   <td>${commissionObject.floor}</td>
   <td>${commissionObject.zipcode}</td>
-  <td>${commissionObject.imageurl1}</td>
-  <td>${commissionObject.imageurl2}</td>
-  <td>${commissionObject.imageurl3}</td>
+  <td id="textTooLong">${commissionObject.imageurl1}</td>
+  <td id="textTooLong">${commissionObject.imageurl2}</td>
+  <td id="textTooLong">${commissionObject.imageurl3}</td>
   <td>
       <button class="editCommissionButton btn btn-com" data-id="${commissionObject.commissionId}">Edit</button>
       <button class="deleteCommissionButton btn btn-delete" data-id="${commissionObject.commissionId}">Delete</button>
@@ -169,10 +169,7 @@ function showCommission(commissionObject) {
 }
 
 function showUpdateCommissionDialog(commission) {
-    // Show the update dialog
     document.querySelector("#update-commission-dialog").style.display = "block";
-
-    // Fill in the form with the existing commission values
     const form = document.querySelector("#update-commission-form");
     form.querySelector("#firstname").value = commission.firstname;
     form.querySelector("#lastname").value = commission.lastname;
@@ -204,7 +201,6 @@ function searchCommissions(searchValue) {
     return results;
 }
 */
-
 
 async function updateCommission(id, firstname, lastname, email, phonenumber, subject, description,
                                 pageformat1, pageformat2, deliverydate, street, housenumber,
@@ -288,7 +284,6 @@ function updateCommissionClicked(event) {
     updateCommission(currentCommissionId, firstname, lastname, email, phonenumber, subject,
         description, pageformat1, pageformat2, deliverydate, street,
         housenumber, floor, zipcode, imageurl1, imageurl2, imageurl3);
-
     form.reset();
 }
 
@@ -296,7 +291,6 @@ async function deleteCommission(id) {
     const response = await fetch(`${endpoint}/${id}`, {
         method: "DELETE",
     });
-
     if (response.ok) {
         console.log("Commission successfully deleted");
         updateCommissionsTable();
@@ -308,31 +302,15 @@ function deleteCommissionClicked(event) {
     const id = event.target.getAttribute("data-id");
     deleteCommission(id);
     document.querySelector("#delete-commission-dialog").style.display = "none";
-
 }
 
 function deleteCancelClicked() {
     document.querySelector("#delete-commission-dialog").style.display = "none";
 }
 
-
-// ============== Helper Functions ============== //
 function prepareData(dataObject) {
     return dataObject;
 }
-
-
-/*function prepareData(dataObject) {
-    const commissionsArray = [];
-
-    for (const key in dataObject) {
-        const commission = dataObject[key];
-        commission.id = key;
-        commissionsArray.push(commission);
-    }
-
-    return commissionsArray;
-}*/
 
 function hideCreateCommissionModal() {
     const modal = document.querySelector("#create-commission-dialog");
@@ -344,23 +322,11 @@ function hideEditCommissionModal() {
     modal.style.display = 'none';
 }
 
-
 function showDeleteCommissionDialog(commissionObject) {
-    // Prevent form submission
-
-    // Retrieve the ID of the commission to be deleted
     const id = commissionObject.commissionId;
-
-    // Find the corresponding commission data
     const commission = commissions.find(commission => commission.commissionId == id);
-
-    // Set the title of the dialog to the commission's name for confirmation
     document.querySelector("#dialog-delete-post-title").textContent = `${commission.firstname} ${commission.lastname}`;
-
-    // Store the ID in the form for deletion
     document.querySelector("#delete-commission-form").setAttribute("data-id", id);
-
-    // Show the delete commission dialog
     document.querySelector("#delete-commission-dialog").style.display = "block";
 }
 

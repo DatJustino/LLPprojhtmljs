@@ -1,14 +1,13 @@
 "use strict";
 
+console.log("commissions.js loaded");
 const endpoint = "http://localhost:8080/commissions";
 
 window.addEventListener("load", initApp);
 
 function initApp() {
-
     document.querySelector("#createCommissionButton").addEventListener("click", showCreateCommissionDialog);
     document.querySelector("#create-commission-form").addEventListener("submit", handleCreateCommission);
-
 }
 function showCreateCommissionDialog() {
     document.querySelector("#create-commission-dialog").style.display = "block"; // show create commission dialog

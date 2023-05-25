@@ -32,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    padding: 0 20% 20% 20%;
+    padding: 0 20% 5% 20%;
 }
 ol, ul {
     list-style: none;
@@ -59,6 +59,21 @@ html {
 body {
     line-height: 1.6;
     font-family: 'Rockwell Nova', sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+#specialPagesPadding {
+    padding: 5% 5% 5% 5%;
+}
+#specialPagesPaddingIndex {
+    padding: 0 0 5% 0;
+}
+#textTooLong {
+    text-overflow: ellipsis;
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 header {
@@ -180,7 +195,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
-    color: #333333;
+    color: #383838;
     align: start;
     padding: 5% 10% 10% 10%
 
@@ -193,21 +208,29 @@ nav {
 
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
     grid-gap: 10px;
-    max-height: 1000px; /* Adjust the maximum height as needed */
-    color: #333333;
-
+    max-height: 800px;
+    color: #383838;
 }
 
 .image-gallery img {
-    width: 100%;
+    width: 90%;
     height: auto;
 }
-/*
-section {
-    margin: 2rem 0;
-}*/
+
+
+.group-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+}
+
+.group-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 #about {
     color: rgb(119, 110, 95);
 }
@@ -303,6 +326,169 @@ form button {
     padding: 12px;
     color: #666;
 }
+
+
+/* Blog Post Table */
+.styled-table {
+    border-collapse: collapse;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table td, .styled-table th {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.styled-table thead th {
+    background-color: #3891A6;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 2px solid #ddd;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Create Blog Post Button */
+#createBlogPostButton {
+    background-color: #2B9EB3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#createBlogPostButton:hover {
+    background-color: #007c91;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #888;
+}
+
+/* Create Blog Post Modal */
+#createBlogPostModal label,
+#createBlogPostModal input,
+#createBlogPostModal textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#createBlogPostModal label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+}
+
+#createBlogPostModal input,
+#createBlogPostModal textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#createBlogPostModal button[type="submit"] {
+    background-color: #2B9EB3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#createBlogPostModal button[type="submit"]:hover {
+    background-color: #007c91;
+}
+
+/* Edit Blog Post Modal */
+#editBlogPostModal label,
+#editBlogPostModal input,
+#editBlogPostModal textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+#editBlogPostModal label {
+    font-weight: bold;
+}
+
+#editBlogPostModal input,
+#editBlogPostModal textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#editBlogPostModal button[type="submit"],
+#editBlogPostModal button[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#editBlogPostModal button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#editBlogPostModal button[type="button"]:hover {
+    background-color: #f44336;
+}
+
+
+
 
 #adminBlogPostContent {
     max-width: 300px;
@@ -408,4 +594,53 @@ text-align: center;
 
 .btn-edit:hover {
     color: #fff;
+}
+
+
+@media screen and (max-width: 1024px) {
+    /* Tablet styles go here */
+    body {
+        padding: 0 10% 10% 10%;
+    }
+    h1, h2, h3, p {
+        font-size: 90%; /* Reduce font-size by 10% */
+    }
+    .btn {
+        padding: 4px 10px; /* Reduce padding */
+    }
+    .image-gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Mobile styles go here */
+    body {
+        padding: 0 5% 5% 5%;
+    }
+    h1, h2, h3, p {
+        font-size: 80%; /* Reduce font-size by 20% */
+    }
+    .btn {
+        padding: 2px 8px; /* Further reduce padding */
+    }
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Smaller mobile styles go here */
+    body {
+        padding: 0 2% 2% 2%;
+    }
+    h1, h2, h3, p {
+        font-size: 70%; /* Reduce font-size by 30% */
+    }
+    .btn {
+        padding: 1px 6px; /* Further reduce padding */
+    }
+    .image-gallery {
+        grid-template-columns: repeat(1, 1fr); /* 1 image per row */
+    }
 }

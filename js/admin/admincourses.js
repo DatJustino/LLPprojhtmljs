@@ -1,16 +1,12 @@
 "use strict";
-
 console.log('admincourses.js loaded');
-
 const endpoint = "http://localhost:8080/admin/courses";
-
 
 const coursesTable = document.querySelector('#coursesTable');
 const editCourseModal = document.querySelector('#editCourseModal');
 const createCourseButton = document.querySelector('#createCourseButton');
 const createCourseModal = document.querySelector('#createCourseModal');
 createCourseButton.addEventListener('click', showCreateCourseModal);
-
 document.querySelector('#createCourseModal').addEventListener('submit', createCourse);
 document.querySelector('#editCourseModal form').addEventListener('submit', updateCourse);
 confirmDeleteButton.addEventListener('click', async (event) => {
@@ -23,10 +19,7 @@ confirmDeleteButton.addEventListener('click', async (event) => {
         console.error(`Error deleting course with ID ${courseId}.`);
     }
 });
-
-/*
-coursesTable.addEventListener('click', showEditCourseModal);
-*/
+/*coursesTable.addEventListener('click', showEditCourseModal);*/
 coursesTable.addEventListener('click', async (event) => {
     coursesTable.addEventListener('click', async (event) => {
         if (event.target.classList.contains('editCourseButton')) {
@@ -39,13 +32,9 @@ coursesTable.addEventListener('click', async (event) => {
     });
 });
 
-// Function to fetch all courses
 async function fetchCourses() {
     try {
         const response = await fetch(`${endpoint}`);
-        /*        if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }*/
         const courses = await response.json();
         return courses;
     } catch (error) {
@@ -60,16 +49,7 @@ async function fetchCourseById(courseId) {
     return course;
 }
 
-/*async function fetchcoursebyidtest(courseId)
- {
-    const course = await fetchCourseById(courseId);
-    console.log(course);
-}
-fetchcoursebyidtest(61)*/
-// Example usage:
-
 ////////////////////// CREATE COURSE /////////////////////////
-// Function to create a new course
 async function createCourse(event) {
     event.preventDefault();
     createCourseModal.style.display = 'block';
@@ -77,7 +57,6 @@ async function createCourse(event) {
     const courseImageUrl = document.querySelector('#courseImageUrl').value;
     const courseDescription = document.querySelector('#courseDescription').value;
     const course = {courseName, courseImageUrl, courseDescription};
-
     try {
         const response = await fetch(`${endpoint}`, {
             method: 'POST',
@@ -107,7 +86,6 @@ async function showEditCourseModal(courseId) {
     document.querySelector('#updateCourseForm [name="courseImageUrl"]').value = course.courseImageUrl;
     document.querySelector('#updateCourseForm [name="courseDescription"]').value = course.courseDescription;
     document.querySelector('#editCourseModal').style.display = 'block';
-    // Add event listener to the Update button in the edit modal
     document.querySelector('#updateCourseButton').addEventListener('click', handleUpdateCourseFormSubmit);
 }
 
@@ -116,7 +94,6 @@ async function handleUpdateCourseFormSubmit(event) {
     const courseName = document.querySelector('#updateCourseForm [name="courseName"]').value;
     const courseImageUrl = document.querySelector('#updateCourseForm [name="courseImageUrl"]').value;
     const courseDescription = document.querySelector('#updateCourseForm [name="courseDescription"]').value;
-
     const updatedCourse = await updateCourse(courseId, courseName, courseImageUrl, courseDescription);
     if (updatedCourse) {
         hideEditCourseModal();
@@ -153,7 +130,6 @@ async function updateCourse(event) {
 }
 
 // Function to update the courses table with the fetched courses
-
 async function updateCoursesTable() {
     try {
         const courses = await fetchCourses();
@@ -165,10 +141,10 @@ async function updateCoursesTable() {
                 <tr class="${index % 2 === 0 ? 'even' : 'odd'}">
                     <td>${course.courseId}</td>
                     <td>${course.courseName}</td>
-                    <td>${course.courseDescription}</td>
+                    <td id="textTooLong">${course.courseDescription}</td>
                     <td>${course.courseImageUrl}</td>
                     <td>
-                        <img src="${course.courseImageUrl}">
+                        <img src="${course.courseImageUrl}" width="200px" height="300px">
                     </td>
                     <td>
                         <button class="editCourseButton" data-courseId="${course.courseId}">Edit</button>
@@ -181,7 +157,6 @@ async function updateCoursesTable() {
 
         console.log('Courses table updated.');
 
-        // Add event listeners to the Edit and Delete buttons in each row
         const editButtons = document.querySelectorAll('.editCourseButton');
         const deleteButtons = document.querySelectorAll('.deleteCourseButton');
 
@@ -209,7 +184,6 @@ async function updateCoursesTable() {
         console.error('Error updating courses table:', error);
     }
 }
-// Call the function to update the courses table when the page loads
 
 async function deleteCourse(courseId) {
     try {
@@ -230,19 +204,13 @@ async function deleteCourse(courseId) {
     }
 }
 
-
-///////////////////////////////////////////////// COURSE XXXXX /////////////////////////////////////////////////
-
-
 function showCreateCourseModal() {
     createCourseModal.style.display = 'block';
 }
 
-
 function hideEditCourseModal() {
     document.querySelector('#editCourseModal').style.display = 'none';
 }
-
 
 window.onload = async function () {
     await updateCoursesTable();
