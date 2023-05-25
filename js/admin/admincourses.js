@@ -147,8 +147,8 @@ async function updateCoursesTable() {
                         <img src="${course.courseImageUrl}" width="200px" height="300px">
                     </td>
                     <td>
-                        <button class="editCourseButton" data-courseId="${course.courseId}">Edit</button>
-                        <button class="deleteCourseButton" data-courseId="${course.courseId}">Delete</button>
+                        <button class="editCourseButton btn" data-courseId="${course.courseId}">Edit</button>
+                        <button class="deleteCourseButton btn" data-courseId="${course.courseId}">Delete</button>
                     </td>
                 </tr>
             `;

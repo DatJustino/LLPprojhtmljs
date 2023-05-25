@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="courses done, blog is done, comments section added and major styling changes to styles.css, starting on the illustrations page.">
-      <change afterPath="$PROJECT_DIR$/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/admin/adminfragments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/adminnavbar.html" afterDir="false" />
+    <list default="true" id="9ff66fdb-e355-4b04-a74a-47187b8294ab" name="Changes" comment="global adjustments, mostly css, added back buttons some places, added a footer as beta, changed table sizes so that the text collapses into ellipse so it can fit the entire table on one screen size, changed admin index, added a testing index.html as placeholder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/admin/admincommissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/admincommissions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/admin/admincourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/admincourses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/commissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/commissions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/course.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/adminblog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminblog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/admincommissions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admincommissions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/admincourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admincourse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/adminindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/illustrations.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/illustrations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/test-nav.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +102,7 @@
       <workItem from="1684497488513" duration="14884000" />
       <workItem from="1684736188019" duration="41800000" />
       <workItem from="1684918240121" duration="18819000" />
-      <workItem from="1685000706983" duration="7835000" />
+      <workItem from="1685000706983" duration="10462000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD for blogpost admin page is working.">
       <created>1683636607853</created>
@@ -191,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684936488920</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="global adjustments, mostly css, added back buttons some places, added a footer as beta, changed table sizes so that the text collapses into ellipse so it can fit the entire table on one screen size, changed admin index, added a testing index.html as placeholder">
+      <created>1685017822448</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685017822448</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +222,7 @@
     <MESSAGE value="html and js changes, added pictures" />
     <MESSAGE value="blogpost now functional, rustic styling added, but functionality works" />
     <MESSAGE value="courses done, blog is done, comments section added and major styling changes to styles.css, starting on the illustrations page." />
-    <option name="LAST_COMMIT_MESSAGE" value="courses done, blog is done, comments section added and major styling changes to styles.css, starting on the illustrations page." />
+    <MESSAGE value="global adjustments, mostly css, added back buttons some places, added a footer as beta, changed table sizes so that the text collapses into ellipse so it can fit the entire table on one screen size, changed admin index, added a testing index.html as placeholder" />
+    <option name="LAST_COMMIT_MESSAGE" value="global adjustments, mostly css, added back buttons some places, added a footer as beta, changed table sizes so that the text collapses into ellipse so it can fit the entire table on one screen size, changed admin index, added a testing index.html as placeholder" />
   </component>
 </project>

@@ -15,7 +15,6 @@ async function fetchCourses() {
     }
 }
 
-// Generate HTML for each course and append it to the course container
 function populateCourses(courses) {
     const courseContainer = document.querySelector(".course-container");
 

@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commission Management</title>
     <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/modal.css">
     <link rel="stylesheet" href="../../css/navbar-header.css">
 </head>
 <body id="specialPagesPadding">
 <h1>Commission Management</h1>
-<button id="createCommissionButton">Create Commission</button>
+<button id="createCommissionButton" class="btn">Create Commission</button>
 
 <!-- Commissions Table -->
 <table id="commissionsTable" class="styled-table">
@@ -56,7 +55,7 @@
         <td>${commissionObject.imageurl2}</td>
         <td>${commissionObject.imageurl3}</td>
         <td>
-            <button class="editCommissionButton btn btn-com" data-id="${commissionObject.commissionid}">Edit</button>
+            <button class="editCommissionButton btn btn-edit" data-id="${commissionObject.commissionid}">Edit</button>
             <button class="deleteCommissionButton btn btn-delete" data-id="${commissionObject.commissionid}">Delete</button>
         </td>
     </tr>
